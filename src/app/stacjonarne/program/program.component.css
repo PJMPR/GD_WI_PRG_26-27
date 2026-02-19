@@ -1,0 +1,203 @@
+.program-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  color: var(--p-primary-color, #3b82f6);
+}
+
+.loading-info {
+  text-align: center;
+  padding: 3rem;
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* Accordion header */
+.semester-header {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.semester-ects-badge {
+  margin-left: 0.5rem;
+  background: var(--p-primary-color, #3b82f6);
+  color: #fff;
+  border-radius: 9999px;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+/* Opis semestru */
+.semester-description {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  border-left: 4px solid var(--p-primary-color, #3b82f6);
+  border-radius: 4px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.description-placeholder {
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* Tabela */
+.semester-table {
+  margin-bottom: 1rem;
+}
+
+.group-row td {
+  background: #f0f4ff !important;
+  font-weight: 600;
+}
+
+.group-label {
+  font-weight: 600;
+}
+
+.child-row td {
+  background: #fafbff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.type-tag {
+  font-size: 0.75rem;
+}
+
+.summary-divider {
+  border: none;
+  border-top: 2px solid #d1d5db;
+  margin: 0.75rem 0;
+}
+
+/* Podsumowanie wszystkich semestrów */
+.total-summary {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: #e5e7eb;
+  border-radius: 8px;
+  border: 2px solid #d1d5db;
+}
+
+.total-summary-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #374151;
+  display: block;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.total-summary-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.total-summary-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.total-summary-label {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.total-summary-value {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #111827;
+}
+
+/* Podsumowanie */
+.semester-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: #e5e7eb;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  margin-top: 0.5rem;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.summary-label {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.summary-value {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #111827;
+}
+
+.ects-value {
+  font-size: 1.1rem;
+  color: var(--p-primary-color, #3b82f6);
+}
+
+.summary-separator {
+  width: 1px;
+  height: 24px;
+  background: #e5e7eb;
+}
+
+.total-hours {
+  margin-left: auto;
+}
+
+/* Dialog */
+.subject-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detail-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+.detail-label {
+  font-weight: 600;
+  min-width: 150px;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.detail-placeholder {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fef9c3;
+  border-radius: 6px;
+  color: #92400e;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}

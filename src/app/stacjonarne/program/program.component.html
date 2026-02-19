@@ -1,0 +1,197 @@
+<div class="program-page">
+
+  @if (loading()) {
+    <div class="loading-info">Ładowanie danych programu...</div>
+  }
+
+  @if (!loading()) {
+
+    <!-- Podsumowanie wszystkich semestrów -->
+    <div class="total-summary">
+      <h1 class="page-title">Program studiów – studia stacjonarne</h1>
+      <span class="total-summary-title">Podsumowanie programu:</span>
+      <div class="total-summary-items">
+        <div class="total-summary-item">
+          <span class="total-summary-label">Łączne ECTS:</span>
+          <span class="total-summary-value ects-value">{{ totals().ects }}</span>
+        </div>
+        <div class="summary-separator"></div>
+        <div class="total-summary-item">
+          <span class="total-summary-label">Wykłady:</span>
+          <span class="total-summary-value">{{ totals().lecture }} h</span>
+        </div>
+        <div class="total-summary-item">
+          <span class="total-summary-label">Ćwiczenia:</span>
+          <span class="total-summary-value">{{ totals().tutorial }} h</span>
+        </div>
+        <div class="total-summary-item">
+          <span class="total-summary-label">Laboratoria:</span>
+          <span class="total-summary-value">{{ totals().lab }} h</span>
+        </div>
+        <div class="total-summary-item">
+          <span class="total-summary-label">Łącznie godzin:</span>
+          <span class="total-summary-value">{{ totals().lecture + totals().tutorial + totals().lab }} h</span>
+        </div>
+      </div>
+    </div>
+
+    <p-tabs [value]="'1'" [scrollable]="true">
+
+      <!-- Lista zakładek -->
+      <p-tablist>
+        @for (sem of semesters(); track sem.semester) {
+          <p-tab [value]="sem.semester.toString()">
+            Semestr {{ sem.semester }}
+          </p-tab>
+        }
+      </p-tablist>
+
+      <!-- Zawartość zakładek -->
+      <p-tabpanels>
+        @for (sem of semesters(); track sem.semester) {
+          <p-tabpanel [value]="sem.semester.toString()">
+
+            <!-- Opis semestru -->
+            <div class="semester-description">
+              @if (sem.description) {
+                <p>{{ sem.description }}</p>
+              } @else {
+                <p class="description-placeholder"><em>Opis programu semestru – do uzupełnienia.</em></p>
+              }
+            </div>
+
+            <!-- TreeTable z przedmiotami -->
+            <p-treeTable
+              [value]="sem.nodes"
+              [columns]="[]"
+              styleClass="p-treetable-sm semester-table"
+              [showGridlines]="true"
+            >
+              <ng-template pTemplate="header">
+                <tr>
+                  <th style="width: 30%">Nazwa przedmiotu</th>
+                  <th style="width: 12%">Typ</th>
+                  <th style="width: 6%">Kod</th>
+                  <th style="width: 6%" class="text-center">Wykład</th>
+                  <th style="width: 6%" class="text-center">Ćwiczenia</th>
+                  <th style="width: 6%" class="text-center">Laborat.</th>
+                  <th style="width: 8%">Forma zal.</th>
+                  <th style="width: 5%" class="text-center">ECTS</th>
+                  <th style="width: 11%"></th>
+                </tr>
+              </ng-template>
+
+              <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
+                <tr [ttRow]="rowNode" [class.group-row]="rowData.isGroup" [class.child-row]="rowNode.level > 0 && !rowData.isGroup">
+                  <td>
+                    <p-treeTableToggler [rowNode]="rowNode" />
+                    <span [class.group-label]="rowData.isGroup">{{ rowData.name }}</span>
+                  </td>
+                  <td>
+                    @if (!rowData.isGroup || rowData.type === 'Specjalizacja') {
+                      <p-tag
+                        [value]="rowData.type"
+                        [severity]="rowData.type === 'Obowiązkowy' ? 'info' : rowData.type === 'Obieralny specjalizacji' ? 'success' : rowData.type === 'Specjalizacja' ? 'warn' : 'secondary'"
+                        styleClass="type-tag"
+                      />
+                    }
+                  </td>
+                  <td>{{ rowData.code }}</td>
+                  <td class="text-center">{{ rowData.lecture }}</td>
+                  <td class="text-center">{{ rowData.tutorial }}</td>
+                  <td class="text-center">{{ rowData.lab }}</td>
+                  <td>{{ rowData.form }}</td>
+                  <td class="text-center"><strong>{{ rowData.ects }}</strong></td>
+                  <td>
+                    @if (!rowData.isGroup) {
+                      <p-button
+                        label="Szczegóły"
+                        icon="pi pi-info-circle"
+                        size="small"
+                        severity="primary"
+                        (onClick)="openDetails(rowData)"
+                      />
+                    }
+                  </td>
+                </tr>
+              </ng-template>
+            </p-treeTable>
+
+            <!-- Podsumowanie semestru -->
+            <hr class="summary-divider" />
+            <div class="semester-summary">
+              <div class="summary-item">
+                <span class="summary-label">Suma ECTS:</span>
+                <span class="summary-value ects-value">{{ sem.totalEcts }}</span>
+              </div>
+              <div class="summary-separator"></div>
+              <div class="summary-item">
+                <span class="summary-label">Wykłady:</span>
+                <span class="summary-value">{{ sem.totalLecture }} h</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Ćwiczenia:</span>
+                <span class="summary-value">{{ sem.totalTutorial }} h</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Laboratoria:</span>
+                <span class="summary-value">{{ sem.totalLab }} h</span>
+              </div>
+              <div class="summary-item total-hours">
+                <span class="summary-label">Łącznie godzin:</span>
+                <span class="summary-value">{{ sem.totalLecture + sem.totalTutorial + sem.totalLab }} h</span>
+              </div>
+            </div>
+
+          </p-tabpanel>
+        }
+      </p-tabpanels>
+
+    </p-tabs>
+  }
+
+  <!-- Dialog szczegółów przedmiotu -->
+  <p-dialog
+    [visible]="dialogVisible()"
+    (visibleChange)="dialogVisible.set($event)"
+    [header]="dialogTitle()"
+    [modal]="true"
+    [style]="{ width: '550px' }"
+    [draggable]="false"
+    [resizable]="false"
+    (onHide)="closeDialog()"
+  >
+    @if (selectedSubject()) {
+      <div class="subject-details">
+        <div class="detail-row">
+          <span class="detail-label">Kod:</span>
+          <span>{{ selectedSubject()!.code }}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Typ:</span>
+          <span>{{ selectedSubject()!.type }}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Forma zaliczenia:</span>
+          <span>{{ selectedSubject()!.form }}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">ECTS:</span>
+          <span>{{ selectedSubject()!.ects }}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Godziny:</span>
+          <span>W: {{ selectedSubject()!.lecture }}h / Ć: {{ selectedSubject()!.tutorial }}h / L: {{ selectedSubject()!.lab }}h</span>
+        </div>
+        <div class="detail-placeholder">
+          <i class="pi pi-clock" style="margin-right: 0.5rem;"></i>
+          <em>Treść sylabusa – w przygotowaniu.</em>
+        </div>
+      </div>
+    }
+    <ng-template pTemplate="footer">
+      <p-button label="Zamknij" icon="pi pi-times" (onClick)="closeDialog()" />
+    </ng-template>
+  </p-dialog>
+</div>
+
