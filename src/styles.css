@@ -23,6 +23,7 @@ html, body {
   transform: none !important;
   z-index: 100 !important;
   box-shadow: 2px 0 8px rgba(0,0,0,0.08) !important;
+  background: #e5e7eb !important;
 }
 
 /* Usuń overlay/maskę dla stałego sidebara */

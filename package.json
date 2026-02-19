@@ -5,6 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration production --base-href ./",
+    "preview": "npx serve dist/pj-studies/browser",
+    "deploy": "ng build --configuration production --base-href ./ && npx gh-pages -d dist/pj-studies/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -40,6 +43,7 @@
     "@angular/build": "^21.1.4",
     "@angular/cli": "^21.1.4",
     "@angular/compiler-cli": "^21.1.0",
+    "gh-pages": "^6.3.0",
     "jsdom": "^27.1.0",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
