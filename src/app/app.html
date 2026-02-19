@@ -1,1 +1,44 @@
-<router-outlet />
+<div class="app-layout">
+
+  <!-- Stały Drawer po lewej -->
+  <p-drawer
+    [visible]="true"
+    [modal]="false"
+    [dismissible]="false"
+    [showCloseIcon]="false"
+    position="left"
+    styleClass="app-sidebar"
+  >
+    <ng-template pTemplate="header">
+      <span class="sidebar-title">Informatyka<br><small>Politechnika Japońska</small></span>
+    </ng-template>
+
+    <ng-template pTemplate="content">
+      <nav class="sidebar-nav">
+        <p class="nav-section-label">Programy studiów</p>
+        <a
+          routerLink="/stacjonarne/program"
+          routerLinkActive="nav-link-active"
+          class="nav-link"
+        >
+          <i class="pi pi-calendar"></i>
+          Studia stacjonarne
+        </a>
+        <a
+          routerLink="/niestacjonarne/program"
+          routerLinkActive="nav-link-active"
+          class="nav-link"
+        >
+          <i class="pi pi-calendar-clock"></i>
+          Studia niestacjonarne
+        </a>
+      </nav>
+    </ng-template>
+  </p-drawer>
+
+  <!-- Główna treść -->
+  <main class="app-main">
+    <router-outlet />
+  </main>
+
+</div>

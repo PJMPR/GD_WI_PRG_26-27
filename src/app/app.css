@@ -1,0 +1,86 @@
+/* Layout główny - sidebar + content */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.app-main {
+  margin-left: 260px;
+  flex: 1;
+  min-height: 100vh;
+  background: #000000;
+}
+
+/* Nadpisanie stałej szerokości sidebara PrimeNG */
+:host ::ng-deep .app-sidebar {
+  width: 260px !important;
+  position: fixed !important;
+}
+
+/* Sidebar nawigacja */
+.sidebar-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.4;
+}
+
+.sidebar-title small {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-top: 0.5rem;
+}
+
+.nav-section-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+  margin: 0 0 0.5rem 0.5rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #374151;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-link i {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.nav-link:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.nav-link:hover i {
+  color: #374151;
+}
+
+.nav-link-active {
+  background: var(--p-primary-50, #ecfdf5) !important;
+  color: var(--p-primary-700, #15803d) !important;
+  font-weight: 600;
+}
+
+.nav-link-active i {
+  color: var(--p-primary-600, #16a34a) !important;
+}
+

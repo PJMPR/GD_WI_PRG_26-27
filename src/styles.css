@@ -13,6 +13,23 @@ html, body {
   color: #111827;
 }
 
+/* Stały sidebar - nadpisanie PrimeNG Drawer */
+.app-sidebar {
+  width: 260px !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  height: 100vh !important;
+  transform: none !important;
+  z-index: 100 !important;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.08) !important;
+}
+
+/* Usuń overlay/maskę dla stałego sidebara */
+.app-sidebar ~ .p-overlay-mask {
+  display: none !important;
+}
+
 /* Odstępy między panelami akordeonu */
 .p-accordion-panel {
   margin-bottom: 1.25rem !important;
