@@ -8,7 +8,7 @@
   font-size: 1.75rem;
   font-weight: 700;
   margin: 0 0 0.75rem 0;
-  color: var(--p-primary-color, #3b82f6);
+  color: #dc2626;
 }
 
 .loading-info {
@@ -26,7 +26,7 @@
 
 .semester-ects-badge {
   margin-left: 0.5rem;
-  background: var(--p-primary-color, #3b82f6);
+  background: #dc2626;
   color: #fff;
   border-radius: 9999px;
   padding: 0.1rem 0.6rem;
@@ -39,8 +39,8 @@
 .semester-description {
   margin-bottom: 1rem;
   padding: 0.75rem 1rem;
-  background: #f8fafc;
-  border-left: 4px solid var(--p-primary-color, #3b82f6);
+  background: #fff5f5;
+  border-left: 4px solid #dc2626;
   border-radius: 4px;
   color: #374151;
   font-size: 0.95rem;
@@ -57,7 +57,7 @@
 }
 
 .group-row td {
-  background: #f0f4ff !important;
+  background: #fff5f5 !important;
   font-weight: 600;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .child-row td {
-  background: #fafbff;
+  background: #fffafa;
 }
 
 .text-center {
@@ -85,17 +85,19 @@
 
 /* Podsumowanie wszystkich semestrów */
 .total-summary {
-  margin-top: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
   padding: 1rem 1.25rem;
-  background: #e5e7eb;
+  background: #ffffff;
   border-radius: 8px;
-  border: 2px solid #d1d5db;
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #dc2626;
 }
 
 .total-summary-title {
   font-weight: 700;
-  font-size: 0.95rem;
-  color: #374151;
+  font-size: 0.85rem;
+  color: #6b7280;
   display: block;
   margin-bottom: 0.75rem;
   text-transform: uppercase;
@@ -158,13 +160,13 @@
 
 .ects-value {
   font-size: 1.1rem;
-  color: var(--p-primary-color, #3b82f6);
+  color: #dc2626;
 }
 
 .summary-separator {
   width: 1px;
   height: 24px;
-  background: #e5e7eb;
+  background: #d1d5db;
 }
 
 .total-hours {
@@ -194,9 +196,9 @@
 .detail-placeholder {
   margin-top: 1rem;
   padding: 1rem;
-  background: #fef9c3;
+  background: #fff5f5;
   border-radius: 6px;
-  color: #92400e;
+  color: #991b1b;
   font-size: 0.9rem;
   display: flex;
   align-items: center;
