@@ -1,0 +1,118 @@
+{
+  "groups": [
+    {
+      "id": "JP1_2",
+      "label": "Języki programowania 1 i 2 (wybór 2 z 6)",
+      "semester": 4,
+      "items": [
+        { "name": "Programowanie w języku Python", "code": "JPT", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2 },
+        { "name": "Programowanie w języku C++", "code": "JCP", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2 },
+        { "name": "Programowanie w języku JAVA", "code": "JJA", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2 },
+        { "name": "Programowanie w języku C#", "code": "JCS", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2 },
+        { "name": "Programowanie w języku SCALA", "code": "JSC", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2 },
+        { "name": "Programowanie w języku F#", "code": "JFS", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2 }
+      ]
+    },
+    {
+      "id": "SBD1_2",
+      "label": "Systemy bazy danych 1 i 2 (wybór 2 z 3)",
+      "semester": 5,
+      "items": [
+        { "name": "Wprowadzenie do baz dokumentowych", "code": "DDO", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2 },
+        { "name": "Wprowadzenie do baz grafowych", "code": "DGR", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2 },
+        { "name": "Wprowadzenie do baz słownikowych", "code": "DSL", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2 }
+      ]
+    },
+    {
+      "id": "TAM1_2",
+      "label": "Technologie Aplikacji Mobilnych 1 i 2 (wybór 2 z 4)",
+      "semester": 6,
+      "items": [
+        { "name": "Wprowadzenie do React Native", "code": "MRN", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2 },
+        { "name": "Wprowadzenie do Flutter", "code": "MFL", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2 },
+        { "name": "Wprowadzenie do .Net MAUI", "code": "MNE", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2 },
+        { "name": "Wprowadzenie do Unity 3D", "code": "MUN", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2 }
+      ]
+    },
+    {
+      "id": "HUM_6",
+      "label": "Przedmiot obieralny humanistyczny/społeczny 1",
+      "semester": 6,
+      "items": [
+        { "name": "Psychologia umiejętności inżynierskich", "code": "PUI", "lecture": 16, "tutorial": 0, "lab": 0, "form": "Z", "ects": 2 },
+        { "name": "Kompetencje lidera IT", "code": "KLI", "lecture": 16, "tutorial": 0, "lab": 0, "form": "Z", "ects": 2 }
+      ]
+    },
+    {
+      "id": "OB_7_1",
+      "label": "Przedmiot Obieralny 1",
+      "semester": 7,
+      "items": [
+        { "name": "Modelowanie i analiza systemów informacyjnych", "code": "MAS", "lecture": 16, "tutorial": 0, "lab": 16, "form": "EZ", "ects": 5 },
+        { "name": "Metody Design Thinking w projektowaniu systemów IT", "code": "DTH", "lecture": 16, "tutorial": 0, "lab": 16, "form": "EZ", "ects": 5 }
+      ]
+    },
+    {
+      "id": "OB_8_2",
+      "label": "Przedmiot Obieralny 2",
+      "semester": 8,
+      "items": [
+        { "name": "Symulacje i gry decyzyjne", "code": "SGD", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2 },
+        { "name": "Zarządzanie projektem informatycznym", "code": "ZPR", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2 }
+      ]
+    },
+    {
+      "id": "HUM_78",
+      "label": "Przedmiot obieralny humanistyczny/społeczny 2 i 3 (wybór 2 z 3)",
+      "semester": 7,
+      "items": [
+        { "name": "Zarządzanie własnym przedsięwzięciem", "code": "POZ", "lecture": 8, "tutorial": 8, "lab": 0, "form": "Z", "ects": 2 },
+        { "name": "Procesy Innowacyjne", "code": "PRIN", "lecture": 8, "tutorial": 8, "lab": 0, "form": "Z", "ects": 2 },
+        { "name": "Komercjalizacja projektów informatycznych", "code": "KMR", "lecture": 8, "tutorial": 8, "lab": 0, "form": "Z", "ects": 2 }
+      ]
+    },
+    {
+      "id": "SPEC_6",
+      "label": "Przedmioty specjalizacyjne (semestr 6)",
+      "semester": 6,
+      "items": []
+    },
+    {
+      "id": "SPEC_7",
+      "label": "Przedmioty specjalizacyjne (semestr 7)",
+      "semester": 7,
+      "items": []
+    },
+    {
+      "id": "SPEC_8",
+      "label": "Przedmioty specjalizacyjne (semestr 8)",
+      "semester": 8,
+      "items": []
+    },
+    {
+      "id": "BYT",
+      "label": "Budowa i Integracja Systemów Informacyjnych",
+      "semester": 7,
+      "items": []
+    },
+    {
+      "id": "PRZ1",
+      "label": "Projekt zespołowy 1",
+      "semester": 7,
+      "items": []
+    },
+    {
+      "id": "PRZ2",
+      "label": "Projekt zespołowy 2",
+      "semester": 8,
+      "items": []
+    },
+    {
+      "id": "PSEM",
+      "label": "Proseminarium",
+      "semester": 8,
+      "items": []
+    }
+  ]
+}
+
