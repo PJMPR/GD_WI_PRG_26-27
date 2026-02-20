@@ -109,6 +109,7 @@ export class ProgramService {
               lab: subject.lab,
               form: subject.form,
               ects: subject.ects,
+              syllabusFile: (subject as any).syllabusFile,
             },
             leaf: true,
           });

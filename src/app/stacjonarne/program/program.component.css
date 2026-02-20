@@ -173,26 +173,7 @@
   margin-left: auto;
 }
 
-/* Dialog */
-.subject-details {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.detail-row {
-  display: flex;
-  gap: 0.75rem;
-  align-items: baseline;
-}
-
-.detail-label {
-  font-weight: 600;
-  min-width: 150px;
-  color: #6b7280;
-  font-size: 0.875rem;
-}
-
+/* Dialog / Sylabus */
 .detail-placeholder {
   margin-top: 1rem;
   padding: 1rem;
@@ -203,3 +184,130 @@
   display: flex;
   align-items: center;
 }
+
+.sylabus-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2.5rem 0;
+  color: #6b7280;
+}
+
+.sylabus-spinner {
+  width: 48px !important;
+  height: 48px !important;
+}
+
+.sylabus-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.25rem 0;
+}
+
+/* Card nagłówek */
+.sylabus-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem 0 1rem;
+  color: #b91c1c;
+}
+
+.sylabus-card :deep(.p-card-body) {
+  padding: 0.5rem 1rem 1rem 1rem;
+}
+
+/* Grid informacje ogólne */
+.sylabus-info-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0.35rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #6b7280;
+  align-self: baseline;
+}
+
+/* Tabela godzin */
+.sylabus-hours-table :deep(th),
+.sylabus-hours-table :deep(td) {
+  font-size: 0.8rem !important;
+  padding: 0.4rem 0.5rem !important;
+  text-align: center;
+}
+
+/* Panel sylabusu */
+.sylabus-panel :deep(.p-panel-header) {
+  background: #1f2937 !important;
+  color: #f9fafb !important;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 6px 6px 0 0;
+}
+
+.sylabus-panel :deep(.p-panel-header .p-panel-header-icon) {
+  color: #f9fafb !important;
+}
+
+.sylabus-panel :deep(.p-panel-content) {
+  padding: 0.75rem 1rem;
+  background: #111827;
+  color: #e5e7eb;
+  border-radius: 0 0 6px 6px;
+  font-size: 0.875rem;
+}
+
+.sylabus-text {
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Listy */
+.sylabus-list {
+  margin: 0.25rem 0 0 0;
+  padding-left: 1.25rem;
+  line-height: 1.7;
+}
+
+.sylabus-list li {
+  margin-bottom: 0.2rem;
+}
+
+/* Metody dydaktyczne */
+.metody-forma-label {
+  font-weight: 600;
+  color: #9ca3af;
+  margin: 0.5rem 0 0.15rem 0;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+}
+
+/* Efekty kształcenia */
+.efekty-kategoria {
+  font-weight: 600;
+  color: #9ca3af;
+  margin: 0.6rem 0 0.2rem 0;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Literatura */
+.literatura-typ {
+  font-weight: 600;
+  color: #9ca3af;
+  margin: 0.5rem 0 0.2rem 0;
+  font-size: 0.82rem;
+}
+
+

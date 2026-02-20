@@ -80,5 +80,78 @@ export interface SubjectRow {
   ects: number | string;
   isGroup?: boolean;
   electiveGroup?: string;
+  syllabusFile?: string;
+}
+
+// ---- Sylabus JSON structures ----
+export interface SylabusGodziny {
+  wyklady: number | null;
+  cwiczenia_lektorat_seminarium: number | null;
+  laboratorium_projekt: number | null;
+}
+
+export interface SylabusGodzinyEcts {
+  z_udzialem_prowadzacego_h: number | null;
+  praca_wlasna_studenta_h: number | null;
+  calkowita_liczba_godzin_h: number | null;
+}
+
+export interface SylabusZaliczenie {
+  [forma: string]: { sposob: string };
+}
+
+export interface SylabusPrzedmiotWprowadzajacy {
+  nazwa: string;
+  wymagania: string;
+}
+
+export interface SylabusLiteratura {
+  podstawowa?: { pozycje: string[] };
+  uzupelniajaca?: { pozycje: string[] };
+  dokumentacja_internetowa?: { [key: string]: string };
+}
+
+export interface SylabusEfekty {
+  wiedza?: string | string[];
+  umiejetnosci?: string | string[];
+  kompetencje_spoleczne?: string | string[];
+}
+
+export interface SylabusMetodyDydaktyczne {
+  wyklad?: string[];
+  cwiczenia?: string[];
+  laboratorium?: string[];
+  lektorat?: string[];
+  projekt?: string[];
+}
+
+export interface SylabusData {
+  uczelnia: string;
+  jednostka: string;
+  kierunek: string;
+  profil: string;
+  tryb_studiow: string;
+  wersja_z_dnia: string;
+  nazwa_przedmiotu: string;
+  kod_przedmiotu: string;
+  rok_studiow: number | null;
+  semestr_studiow: number | null;
+  obligatoryjny: boolean;
+  forma_i_liczba_godzin_zajec: SylabusGodziny;
+  odpowiedzialny_za_przedmiot: string;
+  ects: number | null;
+  godziny: SylabusGodzinyEcts;
+  metody_dydaktyczne: SylabusMetodyDydaktyczne;
+  zaliczenie: SylabusZaliczenie;
+  kryteria_oceny: string[];
+  przedmioty_wprowadzajace: SylabusPrzedmiotWprowadzajacy[];
+  cel_dydaktyczny: string;
+  literatura: SylabusLiteratura;
+  efekty_ksztalcenia: SylabusEfekty;
+  tresci_programowe: string[];
+}
+
+export interface SylabusFile {
+  sylabus: SylabusData;
 }
 
