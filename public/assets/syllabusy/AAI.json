@@ -1,13 +1,13 @@
-﻿{
+{
     "sylabus":  {
                     "uczelnia":  "Polsko-Japonska Akademia Technik Komputerowych Filia w Gdansku",
                     "jednostka":  "Filia w Gdansku",
                     "kierunek":  "INFORMATYKA",
                     "profil":  "praktyczny",
                     "tryb_studiow":  "stacjonarny",
-                    "wersja_z_dnia":  "15.02.2025",
+                    "wersja_z_dnia":  "19.02.2026",
                     "nazwa_przedmiotu":  "Zastosowanie sztucznej inteligencji",
-                    "kod_przedmiotu":  "",
+                    "kod_przedmiotu":  "AAI",
                     "rok_studiow":  4,
                     "semestr_studiow":  7,
                     "obligatoryjny":  true,

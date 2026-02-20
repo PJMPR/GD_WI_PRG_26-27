@@ -1,14 +1,20 @@
-import { Component, OnInit, computed, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, computed, signal, inject } from '@angular/core';
+import { CommonModule, APP_BASE_HREF } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { AccordionModule } from 'primeng/accordion';
 import { TabsModule } from 'primeng/tabs';
 import { TreeTableModule } from 'primeng/treetable';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { TagModule } from 'primeng/tag';
+import { PanelModule } from 'primeng/panel';
+import { CardModule } from 'primeng/card';
+import { TableModule } from 'primeng/table';
+import { DividerModule } from 'primeng/divider';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 import { NiestacjonarneProgramService, SemesterViewModel } from './services/niestacjonarne-program.service';
-import { SubjectRow } from '../../stacjonarne/program/models/program.models';
+import { SubjectRow, SylabusData, SylabusFile } from '../../stacjonarne/program/models/program.models';
 
 @Component({
   selector: 'app-niestacjonarne-program',
@@ -21,6 +27,11 @@ import { SubjectRow } from '../../stacjonarne/program/models/program.models';
     ButtonModule,
     DialogModule,
     TagModule,
+    PanelModule,
+    CardModule,
+    TableModule,
+    DividerModule,
+    ProgressSpinnerModule,
   ],
   templateUrl: './niestacjonarne-program.component.html',
   styleUrl: './niestacjonarne-program.component.css',
@@ -42,8 +53,15 @@ export class NiestacjonarneProgramComponent implements OnInit {
   dialogVisible = signal(false);
   dialogTitle = signal('');
   selectedSubject = signal<SubjectRow | null>(null);
+  sylabus = signal<SylabusData | null>(null);
+  sylabusLoading = signal(false);
 
-  constructor(private programService: NiestacjonarneProgramService) {}
+  private baseHref = inject(APP_BASE_HREF, { optional: true }) ?? '/';
+
+  constructor(
+    private programService: NiestacjonarneProgramService,
+    private http: HttpClient,
+  ) {}
 
   ngOnInit(): void {
     this.programService.loadAll().subscribe({
@@ -61,12 +79,29 @@ export class NiestacjonarneProgramComponent implements OnInit {
   openDetails(subject: SubjectRow): void {
     this.selectedSubject.set(subject);
     this.dialogTitle.set(subject.name);
+    this.sylabus.set(null);
     this.dialogVisible.set(true);
+
+    if (subject.syllabusFile) {
+      this.sylabusLoading.set(true);
+      const base = this.baseHref.endsWith('/') ? this.baseHref : this.baseHref + '/';
+      const url = `${base}${subject.syllabusFile}`;
+      this.http.get<SylabusFile>(url).subscribe({
+        next: (data) => {
+          this.sylabus.set(data.sylabus);
+          this.sylabusLoading.set(false);
+        },
+        error: () => {
+          this.sylabusLoading.set(false);
+        },
+      });
+    }
   }
 
   closeDialog(): void {
     this.dialogVisible.set(false);
     this.selectedSubject.set(null);
+    this.sylabus.set(null);
   }
 
   getTypeLabel(type: string): string {
@@ -74,5 +109,24 @@ export class NiestacjonarneProgramComponent implements OnInit {
     if (type === 'O') return 'Obieralny';
     return type;
   }
+
+  asArray(val: string | string[] | undefined | null): string[] {
+    if (!val) return [];
+    if (Array.isArray(val)) return val;
+    return [val];
+  }
+
+  getZaliczenieEntries(z: Record<string, { sposob: string }> | undefined): { forma: string; sposob: string }[] {
+    if (!z) return [];
+    return Object.entries(z).map(([forma, v]) => ({ forma, sposob: v.sposob }));
+  }
+
+  getMetodyEntries(m: any): { forma: string; metody: string[] }[] {
+    if (!m) return [];
+    return Object.entries(m)
+      .filter(([, v]) => Array.isArray(v) && (v as string[]).length > 0)
+      .map(([forma, v]) => ({ forma, metody: v as string[] }));
+  }
 }
+
 
