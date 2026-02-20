@@ -109,7 +109,7 @@
                         icon="pi pi-info-circle"
                         size="small"
                         severity="primary"
-                        (onClick)="openDetails(rowData)"
+                        (onClick)="openDetails(rowData, sem.semester)"
                       />
                     }
                   </td>
@@ -170,28 +170,18 @@
         </div>
       }
       @if (!sylabusLoading() && !sylabus() && !selectedSubject()!.syllabusFile) {
-        <div class="sylabus-brak">
-          <p-panel header="Informacje podstawowe" [toggleable]="false" styleClass="sylabus-panel">
-            <div class="sylabus-info-grid">
-              <span class="info-label">Kod:</span><span>{{ selectedSubject()!.code }}</span>
-              <span class="info-label">Typ:</span><span>{{ selectedSubject()!.type }}</span>
-              <span class="info-label">Forma zaliczenia:</span><span>{{ selectedSubject()!.form }}</span>
-              <span class="info-label">ECTS:</span><span><strong>{{ selectedSubject()!.ects }}</strong></span>
-              <span class="info-label">Wykłady / Ćwiczenia / Lab.:</span>
-              <span>{{ selectedSubject()!.lecture }}h / {{ selectedSubject()!.tutorial }}h / {{ selectedSubject()!.lab }}h</span>
-            </div>
-          </p-panel>
-          <div class="detail-placeholder">
-            <i class="pi pi-info-circle" style="margin-right:0.5rem;"></i>
-            <em>Sylabus dla tego przedmiotu nie jest jeszcze dostępny.</em>
-          </div>
-        </div>
+        <app-sylabus-form
+          [subject]="selectedSubject()!"
+          [semester]="selectedSemester()"
+          trybStudiow="niestacjonarny"
+        />
       }
       @if (!sylabusLoading() && !sylabus() && selectedSubject()!.syllabusFile) {
-        <div class="detail-placeholder">
-          <i class="pi pi-exclamation-triangle" style="margin-right:0.5rem;"></i>
-          <em>Nie udało się załadować sylabusa.</em>
-        </div>
+        <app-sylabus-form
+          [subject]="selectedSubject()!"
+          [semester]="selectedSemester()"
+          trybStudiow="niestacjonarny"
+        />
       }
       @if (!sylabusLoading() && sylabus(); as s) {
         <div class="sylabus-container">

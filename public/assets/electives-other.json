@@ -5,12 +5,11 @@
       "label": "Języki programowania 1 i 2 (wybór 2 z 6)",
       "semester": 2,
       "items": [
-        { "name": "Programowanie w języku Python", "code": "JPT", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
-        { "name": "Programowanie w języku C++", "code": "JCP", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
-        { "name": "Programowanie w języku JAVA", "code": "JJA", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
-        { "name": "Programowanie w języku C#", "code": "JCS", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
-        { "name": "Programowanie w języku SCALA", "code": "JSC", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
-        { "name": "Programowanie w języku F#", "code": "JFS", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 }
+        { "name": "Programowanie w języku Python", "code": "JPT", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2,"syllabusFile": "assets/syllabusy/JPT.json"  },
+        { "name": "Programowanie w języku C++", "code": "JCP", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2, "syllabusFile": "assets/syllabusy/JCP.json" },
+        { "name": "Programowanie w języku JAVA", "code": "JJA", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2, "syllabusFile": "assets/syllabusy/JJA.json" },
+        { "name": "Programowanie w języku SCALA", "code": "JSC", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2,"syllabusFile": "assets/syllabusy/JSC.json"  },
+        { "name": "Programowanie w języku F#", "code": "JFS", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2, "syllabusFile": "assets/syllabusy/JFS.json" }
       ]
     },
     {
@@ -18,9 +17,9 @@
       "label": "Systemy bazy danych 1 i 2 (wybór 2 z 3)",
       "semester": 3,
       "items": [
-        { "name": "Wprowadzenie do baz dokumentowych", "code": "DDO", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
-        { "name": "Wprowadzenie do baz grafowych", "code": "DGR", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
-        { "name": "Wprowadzenie do baz słownikowych", "code": "DSL", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 }
+        { "name": "Wprowadzenie do baz dokumentowych", "code": "DDO", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2,  "syllabusFile": "assets/syllabusy/DDO.json" },
+        { "name": "Wprowadzenie do baz grafowych", "code": "DGR", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2,   "syllabusFile": "assets/syllabusy/DGR.json" },
+        { "name": "Wprowadzenie do baz słownikowych", "code": "DSL", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2,  "syllabusFile": "assets/syllabusy/DSL.json"  }
       ]
     },
     {
@@ -28,10 +27,10 @@
       "label": "Technologie Aplikacji Mobilnych 1 i 2 (wybór 2 z 4)",
       "semester": 4,
       "items": [
-        { "name": "Wprowadzenie do React Native", "code": "MRN", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
-        { "name": "Wprowadzenie do Flutter", "code": "MFL", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
-        { "name": "Wprowadzenie do .Net MAUI", "code": "MNE", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
-        { "name": "Wprowadzenie do Unity 3D", "code": "MUN", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 }
+        { "name": "Wprowadzenie do React Native", "code": "MRN", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2, "syllabusFile": "assets/syllabusy/MRN.json" },
+        { "name": "Wprowadzenie do Flutter", "code": "MFL", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2,"syllabusFile": "assets/syllabusy/MFL.json"  },
+        { "name": "Wprowadzenie do .Net MAUI", "code": "MNE", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2,"syllabusFile": "assets/syllabusy/MNE.json"  },
+        { "name": "Wprowadzenie do Unity 3D", "code": "MUN", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2, "syllabusFile": "assets/syllabusy/MUN.json" }
       ]
     },
     {

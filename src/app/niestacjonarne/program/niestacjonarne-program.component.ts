@@ -16,6 +16,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { NiestacjonarneProgramService, SemesterViewModel } from './services/niestacjonarne-program.service';
 import { SubjectRow, SylabusData, SylabusFile } from '../../stacjonarne/program/models/program.models';
 import { BaseHrefService } from '../../shared/base-href.service';
+import { SylabusFormComponent } from '../../shared/sylabus-form/sylabus-form.component';
 
 @Component({
   selector: 'app-niestacjonarne-program',
@@ -33,6 +34,7 @@ import { BaseHrefService } from '../../shared/base-href.service';
     TableModule,
     DividerModule,
     ProgressSpinnerModule,
+    SylabusFormComponent,
   ],
   templateUrl: './niestacjonarne-program.component.html',
   styleUrl: './niestacjonarne-program.component.css',
@@ -54,6 +56,7 @@ export class NiestacjonarneProgramComponent implements OnInit {
   dialogVisible = signal(false);
   dialogTitle = signal('');
   selectedSubject = signal<SubjectRow | null>(null);
+  selectedSemester = signal<number>(1);
   sylabus = signal<SylabusData | null>(null);
   sylabusLoading = signal(false);
 
@@ -77,8 +80,9 @@ export class NiestacjonarneProgramComponent implements OnInit {
     });
   }
 
-  openDetails(subject: SubjectRow): void {
+  openDetails(subject: SubjectRow, semester: number = 1): void {
     this.selectedSubject.set(subject);
+    this.selectedSemester.set(semester);
     this.dialogTitle.set(subject.name);
     this.sylabus.set(null);
     this.dialogVisible.set(true);
