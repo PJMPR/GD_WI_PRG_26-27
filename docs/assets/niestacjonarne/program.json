@@ -1,0 +1,114 @@
+{
+  "semesters": [
+    {
+      "semester": 1,
+      "summary": { "ects": 29, "lecture": 124, "tutorial": 48, "lab": 64 },
+      "description": "",
+      "subjects": [
+        { "name": "Analiza Matematyczna", "type": "M", "code": "AM", "lecture": 16, "tutorial": 16, "lab": 0, "form": "EZ", "ects": 5, "syllabusFile": "assets/syllabusy-n/AMs.json" },
+        { "name": "Podstawy Programowania", "type": "M", "code": "PRG", "lecture": 24, "tutorial": 0, "lab": 32, "form": "EZ", "ects": 6, "syllabusFile": "assets/syllabusy-n/PRG1.json" },
+        { "name": "Warsztat programisty", "type": "M", "code": "WPR", "lecture": 16, "tutorial": 0, "lab": 16, "form": "Z", "ects": 4, "syllabusFile": "assets/syllabusy-n/WPR.json" },
+        { "name": "Użytkowanie komputerów i podstawy systemów operacyjnych", "type": "M", "code": "UKOS", "lecture": 16, "tutorial": 0, "lab": 16, "form": "EZ", "ects": 5, "syllabusFile": "assets/syllabusy-n/UKOS.json" },
+        { "name": "Historia i kultura Japonii", "type": "M", "code": "HKJ", "lecture": 32, "tutorial": 0, "lab": 0, "form": "Z", "ects": 2, "syllabusFile": "assets/syllabusy-n/HKJ.json" },
+        { "name": "Wstęp do zarządzania", "type": "M", "code": "WDZ", "lecture": 16, "tutorial": 16, "lab": 0, "form": "Z", "ects": 4 },
+        { "name": "Język angielski 1", "type": "M", "code": "ANG1", "lecture": 0, "tutorial": 16, "lab": 0, "form": "Z", "ects": 3, "syllabusFile": "assets/syllabusy-n/ANG1-3.json" },
+        { "name": "Szkolenie BHP", "type": "M", "code": "BHP", "lecture": 4, "tutorial": 0, "lab": 0, "form": "Z", "ects": 0 }
+      ]
+    },
+    {
+      "semester": 2,
+      "summary": { "ects": 26, "lecture": 88, "tutorial": 48, "lab": 64 },
+      "description": "",
+      "subjects": [
+        { "name": "Algebra liniowa i geometria", "type": "M", "code": "ALG", "lecture": 16, "tutorial": 16, "lab": 0, "form": "EZ", "ects": 5, "syllabusFile": "assets/syllabusy-n/ALG.json" },
+        { "name": "Matematyka Dyskretna", "type": "M", "code": "MAD", "lecture": 16, "tutorial": 16, "lab": 0, "form": "EZ", "ects": 5, "syllabusFile": "assets/syllabusy-n/MAD.json" },
+        { "name": "Relacyjne bazy danych", "type": "M", "code": "RBD", "lecture": 16, "tutorial": 0, "lab": 16, "form": "EZ", "ects": 5, "syllabusFile": "assets/syllabusy-n/RBD.json" },
+        { "name": "Programowanie obiektowe", "type": "M", "code": "POJ", "lecture": 24, "tutorial": 0, "lab": 32, "form": "Z", "ects": 4 },
+        { "name": "Technologie internetu", "type": "M", "code": "TIN", "lecture": 16, "tutorial": 0, "lab": 16, "form": "Z", "ects": 4, "syllabusFile": "assets/syllabusy-n/TIN.json" },
+        { "name": "Język angielski 2", "type": "M", "code": "ANG2", "lecture": 0, "tutorial": 16, "lab": 0, "form": "Z", "ects": 3, "syllabusFile": "assets/syllabusy-n/ANG1-3.json" }
+      ]
+    },
+    {
+      "semester": 3,
+      "summary": { "ects": 27, "lecture": 88, "tutorial": 16, "lab": 104 },
+      "description": "",
+      "subjects": [
+        { "name": "Programowanie aplikacji internetowych", "type": "M", "code": "PAI", "lecture": 24, "tutorial": 0, "lab": 32, "form": "Z", "ects": 6 },
+        { "name": "Fizyka", "type": "M", "code": "FIZ", "lecture": 16, "tutorial": 0, "lab": 16, "form": "Z", "ects": 3, "syllabusFile": "assets/syllabusy-n/FIZ.json" },
+        { "name": "Statystyczna analiza danych", "type": "M", "code": "SAD", "lecture": 16, "tutorial": 0, "lab": 16, "form": "EZ", "ects": 5, "syllabusFile": "assets/syllabusy-n/SAD.json" },
+        { "name": "Algorytmy i struktury danych", "type": "M", "code": "ASD", "lecture": 16, "tutorial": 0, "lab": 24, "form": "EZ", "ects": 5, "syllabusFile": "assets/syllabusy-n/ASD.json" },
+        { "name": "Systemy operacyjne", "type": "M", "code": "SOP", "lecture": 16, "tutorial": 0, "lab": 16, "form": "EZ", "ects": 5, "syllabusFile": "assets/syllabusy-n/SOP.json" },
+        { "name": "Język angielski 3", "type": "M", "code": "ANG3", "lecture": 0, "tutorial": 16, "lab": 0, "form": "Z", "ects": 3, "syllabusFile": "assets/syllabusy-n/ANG1-3.json" }
+      ]
+    },
+    {
+      "semester": 4,
+      "summary": { "ects": 25, "lecture": 80, "tutorial": 16, "lab": 104 },
+      "description": "",
+      "subjects": [
+        { "name": "Grafika komputerowa", "type": "M", "code": "GRK", "lecture": 16, "tutorial": 0, "lab": 16, "form": "EZ", "ects": 5, "syllabusFile": "assets/syllabusy-n/GRK.json" },
+        { "name": "Elektronika", "type": "M", "code": "ELK", "lecture": 16, "tutorial": 0, "lab": 16, "form": "Z", "ects": 4, "syllabusFile": "assets/syllabusy-n/ELK.json" },
+        { "name": "Sieci komputerowe", "type": "M", "code": "SKOA", "lecture": 16, "tutorial": 0, "lab": 24, "form": "EZ", "ects": 5, "syllabusFile": "assets/syllabusy-n/SKOA.json" },
+        { "name": "Programowanie Sprzętowe", "type": "M", "code": "LLP", "lecture": 16, "tutorial": 0, "lab": 16, "form": "Z", "ects": 4 },
+        { "name": "Języki programowania 1", "type": "O", "code": "-", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2, "electiveGroup": "JP1_2" },
+        { "name": "Języki programowania 2", "type": "O", "code": "-", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2, "electiveGroup": "JP1_2" },
+        { "name": "Lektorat", "type": "O", "code": "LEK1", "lecture": 0, "tutorial": 16, "lab": 0, "form": "Z", "ects": 3, "electiveGroup": "LEK1" }
+      ]
+    },
+    {
+      "semester": 5,
+      "summary": { "ects": 24, "lecture": 72, "tutorial": 16, "lab": 80 },
+      "description": "",
+      "subjects": [
+        { "name": "Bezpieczeństwo systemów informacyjnych", "type": "M", "code": "BSI", "lecture": 8, "tutorial": 0, "lab": 16, "form": "Z", "ects": 3, "syllabusFile": "assets/syllabusy-n/BSI.json" },
+        { "name": "Narzędzia sztucznej inteligencji", "type": "M", "code": "NAI", "lecture": 16, "tutorial": 0, "lab": 16, "form": "EZ", "ects": 5, "syllabusFile": "assets/syllabusy-n/NAI.json" },
+        { "name": "Systemy wbudowane", "type": "M", "code": "SWB", "lecture": 16, "tutorial": 0, "lab": 16, "form": "Z", "ects": 4, "syllabusFile": "assets/syllabusy-n/SWB.json" },
+        { "name": "Interakcja człowiek-komputer", "type": "M", "code": "ICK", "lecture": 16, "tutorial": 0, "lab": 16, "form": "EZ", "ects": 5, "syllabusFile": "assets/syllabusy-n/ICK.json" },
+        { "name": "Systemy baz danych 1", "type": "O", "code": "-", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2, "electiveGroup": "SBD1_2" },
+        { "name": "Systemy baz danych 2", "type": "O", "code": "-", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2, "electiveGroup": "SBD1_2" },
+        { "name": "Lektorat", "type": "O", "code": "LEK2", "lecture": 0, "tutorial": 16, "lab": 0, "form": "Z", "ects": 3, "electiveGroup": "LEK2" }
+      ]
+    },
+    {
+      "semester": 6,
+      "summary": { "ects": 25, "lecture": 80, "tutorial": 60, "lab": 80 },
+      "description": "",
+      "subjects": [
+        { "name": "Projektowanie systemów informacyjnych", "type": "M", "code": "PRI", "lecture": 16, "tutorial": 0, "lab": 16, "form": "Z", "ects": 6, "syllabusFile": "assets/syllabusy-n/PRI.json" },
+        { "name": "Technologie aplikacji mobilnych 1", "type": "O", "code": "-", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2, "electiveGroup": "TAM1_2" },
+        { "name": "Technologie aplikacji mobilnych 2", "type": "O", "code": "-", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 2, "electiveGroup": "TAM1_2" },
+        { "name": "Przedmiot specjalizacyjny 1", "type": "O", "code": "-", "lecture": 16, "tutorial": 0, "lab": 16, "form": "EZ", "ects": 5, "electiveGroup": "SPEC_6" },
+        { "name": "Przedmiot specjalizacyjny 2", "type": "O", "code": "-", "lecture": 16, "tutorial": 0, "lab": 16, "form": "EZ", "ects": 5, "electiveGroup": "SPEC_6" },
+        { "name": "Przedmiot obieralny humanistyczny/społeczny 1", "type": "O", "code": "-", "lecture": 16, "tutorial": 0, "lab": 0, "form": "Z", "ects": 2, "electiveGroup": "HUM_6" },
+        { "name": "Lektorat", "type": "O", "code": "LEK3", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3, "electiveGroup": "LEK3" }
+      ]
+    },
+    {
+      "semester": 7,
+      "summary": { "ects": 26, "lecture": 80, "tutorial": 24, "lab": 96 },
+      "description": "",
+      "subjects": [
+        { "name": "Budowa i Integracja Systemów Informacyjnych", "type": "O", "code": "BYT", "lecture": 24, "tutorial": 0, "lab": 32, "form": "EZ", "ects": 6, "electiveGroup": "BYT", "syllabusFile": "assets/syllabusy-n/BYT.json" },
+        { "name": "Przedmiot Specjalizacyjny 3", "type": "O", "code": "-", "lecture": 16, "tutorial": 0, "lab": 16, "form": "EZ", "ects": 5, "electiveGroup": "SPEC_7" },
+        { "name": "Projekt zespołowy 1", "type": "O", "code": "PRZ1", "lecture": 16, "tutorial": 0, "lab": 32, "form": "Z", "ects": 6, "electiveGroup": "PRZ1" },
+        { "name": "Przedmiot obieralny humanistyczny/społeczny 2", "type": "O", "code": "-", "lecture": 8, "tutorial": 8, "lab": 0, "form": "Z", "ects": 2, "electiveGroup": "HUM_78" },
+        { "name": "Przedmiot Obieralny 1", "type": "O", "code": "-", "lecture": 16, "tutorial": 0, "lab": 16, "form": "EZ", "ects": 5, "electiveGroup": "OB_7_1" },
+        { "name": "Lektorat", "type": "O", "code": "LEK4", "lecture": 0, "tutorial": 16, "lab": 0, "form": "Z", "ects": 2, "electiveGroup": "LEK4" }
+      ]
+    },
+    {
+      "semester": 8,
+      "summary": { "ects": 26, "lecture": 48, "tutorial": 32, "lab": 96 },
+      "description": "",
+      "subjects": [
+        { "name": "Przedmiot obieralny humanistyczny/społeczny 3", "type": "O", "code": "-", "lecture": 8, "tutorial": 0, "lab": 8, "form": "EZ", "ects": 3, "electiveGroup": "HUM_78" },
+        { "name": "Przedmiot Obieralny 2", "type": "O", "code": "-", "lecture": 8, "tutorial": 0, "lab": 8, "form": "Z", "ects": 3, "electiveGroup": "OB_8_2" },
+        { "name": "Proseminarium", "type": "O", "code": "PSEM", "lecture": 0, "tutorial": 16, "lab": 0, "form": "Z", "ects": 3, "electiveGroup": "PSEM" },
+        { "name": "Przedmiot Specjalizacyjny 4", "type": "O", "code": "-", "lecture": 16, "tutorial": 0, "lab": 16, "form": "EZ", "ects": 5, "electiveGroup": "SPEC_8" },
+        { "name": "Projekt zespołowy 2", "type": "O", "code": "PRZ2", "lecture": 0, "tutorial": 0, "lab": 40, "form": "Z", "ects": 6, "electiveGroup": "PRZ2" },
+        { "name": "Społeczne aspekty informatyki", "type": "M", "code": "SAI", "lecture": 16, "tutorial": 0, "lab": 16, "form": "Z", "ects": 4, "syllabusFile": "assets/syllabusy-n/SAI.json" },
+        { "name": "Lektorat", "type": "O", "code": "LEK5", "lecture": 0, "tutorial": 16, "lab": 0, "form": "Z", "ects": 2, "electiveGroup": "LEK5" }
+      ]
+    }
+  ]
+}

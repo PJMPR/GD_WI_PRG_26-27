@@ -1,0 +1,156 @@
+{
+  "groups": [
+    {
+      "id": "JP1_2",
+      "label": "Języki programowania 1 i 2 (wybór 2 z 6)",
+      "semester": 2,
+      "items": [
+        { "name": "Programowanie w języku Python", "code": "JPT", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
+        { "name": "Programowanie w języku C++", "code": "JCP", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
+        { "name": "Programowanie w języku JAVA", "code": "JJA", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
+        { "name": "Programowanie w języku C#", "code": "JCS", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
+        { "name": "Programowanie w języku SCALA", "code": "JSC", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
+        { "name": "Programowanie w języku F#", "code": "JFS", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 }
+      ]
+    },
+    {
+      "id": "SBD1_2",
+      "label": "Systemy bazy danych 1 i 2 (wybór 2 z 3)",
+      "semester": 3,
+      "items": [
+        { "name": "Wprowadzenie do baz dokumentowych", "code": "DDO", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
+        { "name": "Wprowadzenie do baz grafowych", "code": "DGR", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
+        { "name": "Wprowadzenie do baz słownikowych", "code": "DSL", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 }
+      ]
+    },
+    {
+      "id": "TAM1_2",
+      "label": "Technologie Aplikacji Mobilnych 1 i 2 (wybór 2 z 4)",
+      "semester": 4,
+      "items": [
+        { "name": "Wprowadzenie do React Native", "code": "MRN", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
+        { "name": "Wprowadzenie do Flutter", "code": "MFL", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
+        { "name": "Wprowadzenie do .Net MAUI", "code": "MNE", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 },
+        { "name": "Wprowadzenie do Unity 3D", "code": "MUN", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2 }
+      ]
+    },
+    {
+      "id": "HUM_5",
+      "label": "Przedmiot obieralny humanistyczny/społeczny 1",
+      "semester": 5,
+      "items": [
+        { "name": "Psychologia umiejętności inżynierskich", "code": "PUI", "lecture": 30, "tutorial": 0, "lab": 0, "form": "Z", "ects": 2 },
+        { "name": "Kompetencje lidera IT", "code": "KLI", "lecture": 30, "tutorial": 0, "lab": 0, "form": "Z", "ects": 2 }
+      ]
+    },
+    {
+      "id": "OB_6_1",
+      "label": "Przedmiot Obieralny 1",
+      "semester": 6,
+      "items": [
+        { "name": "Modelowanie i analiza systemów informacyjnych", "code": "MAS", "lecture": 30, "tutorial": 0, "lab": 30, "form": "EZ", "ects": 5, "syllabusFile": "assets/syllabusy/MAS.json" },
+        { "name": "Metody Design Thinking w projektowaniu systemów IT", "code": "DTH", "lecture": 30, "tutorial": 0, "lab": 30, "form": "EZ", "ects": 5 }
+      ]
+    },
+    {
+      "id": "OB_6_2",
+      "label": "Przedmiot Obieralny 2",
+      "semester": 6,
+      "items": [
+        { "name": "Symulacje i gry decyzyjne", "code": "SGD", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2, "syllabusFile": "assets/syllabusy/SGD.json" },
+        { "name": "Zarządzanie projektem informatycznym", "code": "ZPR", "lecture": 15, "tutorial": 0, "lab": 15, "form": "Z", "ects": 2, "syllabusFile": "assets/syllabusy/ZPR.json" }
+      ]
+    },
+    {
+      "id": "HUM_7",
+      "label": "Przedmiot obieralny humanistyczny/społeczny 2 i 3 (wybór 2 z 3)",
+      "semester": 7,
+      "items": [
+        { "name": "Zarządzanie własnym przedsięwzięciem", "code": "POZ", "lecture": 15, "tutorial": 15, "lab": 0, "form": "Z", "ects": 2, "syllabusFile": "assets/syllabusy/POZ.json" },
+        { "name": "Procesy Innowacyjne", "code": "PRIN", "lecture": 15, "tutorial": 15, "lab": 0, "form": "Z", "ects": 2, "syllabusFile": "assets/syllabusy/PRIN.json" },
+        { "name": "Komercjalizacja projektów informatycznych", "code": "KMR", "lecture": 15, "tutorial": 15, "lab": 0, "form": "Z", "ects": 2 }
+      ]
+    },
+    {
+      "id": "SPEC_5",
+      "label": "Przedmioty specjalizacyjne (semestr 5)",
+      "semester": 5,
+      "items": []
+    },
+    {
+      "id": "SPEC_6",
+      "label": "Przedmioty specjalizacyjne (semestr 6)",
+      "semester": 6,
+      "items": []
+    },
+    {
+      "id": "SPEC_7",
+      "label": "Przedmioty specjalizacyjne (semestr 7)",
+      "semester": 7,
+      "items": []
+    },
+    {
+      "id": "PRZ1",
+      "label": "Projekt Zespołowy",
+      "semester": 6,
+      "items": []
+    },
+    {
+      "id": "PRZ2",
+      "label": "Projekt zespołowy 2",
+      "semester": 7,
+      "items": []
+    },
+    {
+      "id": "PSEM",
+      "label": "Proseminarium",
+      "semester": 7,
+      "items": []
+    },
+    {
+      "id": "LEK1",
+      "label": "Lektorat (wybór języka)",
+      "semester": 4,
+      "items": [
+        { "name": "Język angielski", "code": "ANG", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 },
+        { "name": "Język niemiecki", "code": "NEM", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 },
+        { "name": "Język hiszpański", "code": "HIS", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 },
+        { "name": "Język japoński", "code": "JAP", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 }
+      ]
+    },
+    {
+      "id": "LEK2",
+      "label": "Lektorat (wybór języka)",
+      "semester": 5,
+      "items": [
+        { "name": "Język angielski", "code": "ANG", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 },
+        { "name": "Język niemiecki", "code": "NEM", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 },
+        { "name": "Język hiszpański", "code": "HIS", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 },
+        { "name": "Język japoński", "code": "JAP", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 }
+      ]
+    },
+    {
+      "id": "LEK3",
+      "label": "Lektorat (wybór języka)",
+      "semester": 6,
+      "items": [
+        { "name": "Język angielski", "code": "ANG", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 },
+        { "name": "Język niemiecki", "code": "NEM", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 },
+        { "name": "Język hiszpański", "code": "HIS", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 },
+        { "name": "Język japoński", "code": "JAP", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 }
+      ]
+    },
+    {
+      "id": "LEK4",
+      "label": "Lektorat (wybór języka)",
+      "semester": 7,
+      "items": [
+        { "name": "Język angielski", "code": "ANG", "lecture": 0, "tutorial": 30, "lab": 0, "form": "Z", "ects": 1 },
+        { "name": "Język niemiecki", "code": "NEM", "lecture": 0, "tutorial": 30, "lab": 0, "form": "Z", "ects": 1 },
+        { "name": "Język hiszpański", "code": "HIS", "lecture": 0, "tutorial": 30, "lab": 0, "form": "Z", "ects": 1 },
+        { "name": "Język japoński", "code": "JAP", "lecture": 0, "tutorial": 30, "lab": 0, "form": "Z", "ects": 1 }
+      ]
+    }
+  ]
+}
+
