@@ -70,6 +70,7 @@ export class ProgramService {
             lab: item.lab,
             form: item.form,
             ects: item.ects,
+            syllabusFile: (item as any).syllabusFile,
           });
         } else {
           specBySemesterGroup.get(key)!.push({
@@ -84,6 +85,7 @@ export class ProgramService {
                 lab: item.lab,
                 form: item.form,
                 ects: item.ects,
+                syllabusFile: (item as any).syllabusFile,
               },
             ],
           });
@@ -202,6 +204,7 @@ export class ProgramService {
                 lab: item.lab,
                 form: item.form,
                 ects: item.ects,
+                syllabusFile: (item as any).syllabusFile,
               },
               leaf: true,
             })),

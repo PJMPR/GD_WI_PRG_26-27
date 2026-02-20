@@ -1,0 +1,11 @@
+SAD -> Statystyczna analiza danych
+SAI -> Społeczne aspekty informatyki
+SWB -> Systemy wbudowane
+TIN -> Technologie internetu
+MAS -> Modelowanie i analiza systemów informacyjnych
+POZ1 -> Zarządzanie własnym przedsięwzięciem
+PRIN -> Procesy Innowacyjne
+SGD -> Symulacje i gry decyzyjne
+SBD -> Systemy baz danych
+NSQL -> Bazy NoSQL
+ZJF -> Zastosowanie języków formalnych

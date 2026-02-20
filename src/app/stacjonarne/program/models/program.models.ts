@@ -37,6 +37,7 @@ export interface ElectiveItem {
   form: string;
   ects: number;
   semester?: number;
+  syllabusFile?: string;
 }
 
 export interface ElectiveGroup {

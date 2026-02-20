@@ -7,14 +7,14 @@
                     "tryb_studiow":  "stacjonarny",
                     "wersja_z_dnia":  "15.02.2025",
                     "nazwa_przedmiotu":  "Statystyczna analiza danych",
-                    "kod_przedmiotu":  "",
+                    "kod_przedmiotu":  "SAD",
                     "rok_studiow":  4,
                     "semestr_studiow":  7,
-                    "obligatoryjny":  true,
+                    "obligatoryjny":  false,
                     "forma_i_liczba_godzin_zajec":  {
                                                         "wyklady":  30,
-                                                        "cwiczenia_lektorat_seminarium":  15,
-                                                        "laboratorium_projekt":  15
+                                                        "cwiczenia_lektorat_seminarium":  30,
+                                                        "laboratorium_projekt":  null
                                                     },
                     "odpowiedzialny_za_przedmiot":  "Dr Monika Wrzosek",
                     "ects":  5,
