@@ -1,11 +1,11 @@
-﻿{
+{
     "sylabus":  {
                     "uczelnia":  "Polsko-Japonska Akademia Technik Komputerowych Filia w Gdansku",
                     "jednostka":  "Filia w Gdansku",
                     "kierunek":  "INFORMATYKA",
                     "profil":  "praktyczny",
                     "tryb_studiow":  "niestacjonarny",
-                    "wersja_z_dnia":  "15.02.2025",
+                    "wersja_z_dnia":  "19.02.2026",
                     "nazwa_przedmiotu":  "Matematyka dyskretna",
                     "kod_przedmiotu":  "MAD",
                     "rok_studiow":  1,
@@ -20,7 +20,7 @@
                     "ects":  5,
                     "godziny":  {
                                     "z_udzialem_prowadzacego_h":  32,
-                                    "praca_wlasna_studenta_h":  65,
+                                    "praca_wlasna_studenta_h":  93,
                                     "calkowita_liczba_godzin_h":  125
                                 },
                     "metody_dydaktyczne":  {

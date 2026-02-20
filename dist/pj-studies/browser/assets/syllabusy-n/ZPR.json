@@ -1,11 +1,11 @@
-﻿{
+{
     "sylabus":  {
                     "uczelnia":  "Polsko-Japonska Akademia Technik Komputerowych Filia w Gdansku",
                     "jednostka":  "Filia w Gdansku",
                     "kierunek":  "INFORMATYKA",
                     "profil":  "praktyczny",
                     "tryb_studiow":  "niestacjonarny",
-                    "wersja_z_dnia":  "15.02.2025",
+                    "wersja_z_dnia":  "19.02.2026",
                     "nazwa_przedmiotu":  "Zarządzanie projektem informatycznym",
                     "kod_przedmiotu":  "ZPR",
                     "rok_studiow":  4,
@@ -20,7 +20,7 @@
                     "ects":  2,
                     "godziny":  {
                                     "z_udzialem_prowadzacego_h":  16,
-                                    "praca_wlasna_studenta_h":  20,
+                                    "praca_wlasna_studenta_h":  34,
                                     "calkowita_liczba_godzin_h":  50
                                 },
                     "metody_dydaktyczne":  {

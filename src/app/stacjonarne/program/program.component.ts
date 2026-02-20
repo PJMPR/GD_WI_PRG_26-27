@@ -15,7 +15,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 import { ProgramService, SemesterViewModel } from './services/program.service';
 import { SubjectRow, SylabusData, SylabusFile } from './models/program.models';
-import { APP_BASE_HREF } from '@angular/common';
+import { BaseHrefService } from '../../shared/base-href.service';
 
 @Component({
   selector: 'app-program',
@@ -57,7 +57,7 @@ export class ProgramComponent implements OnInit {
   sylabus = signal<SylabusData | null>(null);
   sylabusLoading = signal(false);
 
-  private baseHref = inject(APP_BASE_HREF, { optional: true }) ?? '/';
+  private baseHrefService = inject(BaseHrefService);
 
   constructor(
     private programService: ProgramService,
@@ -85,8 +85,7 @@ export class ProgramComponent implements OnInit {
 
     if (subject.syllabusFile) {
       this.sylabusLoading.set(true);
-      const base = this.baseHref.endsWith('/') ? this.baseHref : this.baseHref + '/';
-      const url = `${base}${subject.syllabusFile}`;
+      const url = this.baseHrefService.assetUrl(subject.syllabusFile);
       this.http.get<SylabusFile>(url).subscribe({
         next: (data) => {
           this.sylabus.set(data.sylabus);

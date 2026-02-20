@@ -1,11 +1,11 @@
-﻿{
+{
     "sylabus":  {
                     "uczelnia":  "Polsko-Japonska Akademia Technik Komputerowych Filia w Gdansku",
                     "jednostka":  "Filia w Gdansku",
                     "kierunek":  "INFORMATYKA",
                     "profil":  "praktyczny",
                     "tryb_studiow":  "niestacjonarny",
-                    "wersja_z_dnia":  "15.02.2025",
+                    "wersja_z_dnia":  "19.02.2026",
                     "nazwa_przedmiotu":  "Budowa i integracja systemów informatycznych",
                     "kod_przedmiotu":  "BYT",
                     "rok_studiow":  4,
@@ -20,8 +20,8 @@
                     "ects":  6,
                     "godziny":  {
                                     "z_udzialem_prowadzacego_h":  56,
-                                    "praca_wlasna_studenta_h":  20,
-                                    "calkowita_liczba_godzin_h":  50
+                                    "praca_wlasna_studenta_h":  94,
+                                    "calkowita_liczba_godzin_h":  150
                                 },
                     "metody_dydaktyczne":  {
 

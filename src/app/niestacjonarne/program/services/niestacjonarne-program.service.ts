@@ -1,6 +1,5 @@
 import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { DOCUMENT } from '@angular/common';
 import { forkJoin, map, Observable } from 'rxjs';
 import {
   ElectiveGroup,
@@ -14,6 +13,7 @@ import {
   SubjectRow,
   SubjectTreeNode,
 } from '../../../stacjonarne/program/models/program.models';
+import { BaseHrefService } from '../../../shared/base-href.service';
 
 export interface SemesterViewModel {
   semester: number;
@@ -28,15 +28,10 @@ export interface SemesterViewModel {
 @Injectable({ providedIn: 'root' })
 export class NiestacjonarneProgramService {
   private http = inject(HttpClient);
-  private document = inject(DOCUMENT);
-
-  private get baseHref(): string {
-    const base = this.document.querySelector('base')?.getAttribute('href') ?? '/';
-    return base.endsWith('/') ? base : base + '/';
-  }
+  private baseHrefService = inject(BaseHrefService);
 
   private url(path: string): string {
-    return `${this.baseHref}assets/niestacjonarne/${path}`;
+    return this.baseHrefService.assetUrl(`niestacjonarne/${path}`);
   }
 
   loadAll(): Observable<SemesterViewModel[]> {
