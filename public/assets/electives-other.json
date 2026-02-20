@@ -106,6 +106,50 @@
       "label": "Proseminarium",
       "semester": 7,
       "items": []
+    },
+    {
+      "id": "LEK1",
+      "label": "Lektorat (wybór języka)",
+      "semester": 4,
+      "items": [
+        { "name": "Język angielski", "code": "ANG", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 },
+        { "name": "Język niemiecki", "code": "NEM", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 },
+        { "name": "Język hiszpański", "code": "HIS", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 },
+        { "name": "Język japoński", "code": "JAP", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 }
+      ]
+    },
+    {
+      "id": "LEK2",
+      "label": "Lektorat (wybór języka)",
+      "semester": 5,
+      "items": [
+        { "name": "Język angielski", "code": "ANG", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 },
+        { "name": "Język niemiecki", "code": "NEM", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 },
+        { "name": "Język hiszpański", "code": "HIS", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 },
+        { "name": "Język japoński", "code": "JAP", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 }
+      ]
+    },
+    {
+      "id": "LEK3",
+      "label": "Lektorat (wybór języka)",
+      "semester": 6,
+      "items": [
+        { "name": "Język angielski", "code": "ANG", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 },
+        { "name": "Język niemiecki", "code": "NEM", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 },
+        { "name": "Język hiszpański", "code": "HIS", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 },
+        { "name": "Język japoński", "code": "JAP", "lecture": 0, "tutorial": 60, "lab": 0, "form": "Z", "ects": 3 }
+      ]
+    },
+    {
+      "id": "LEK4",
+      "label": "Lektorat (wybór języka)",
+      "semester": 7,
+      "items": [
+        { "name": "Język angielski", "code": "ANG", "lecture": 0, "tutorial": 30, "lab": 0, "form": "Z", "ects": 1 },
+        { "name": "Język niemiecki", "code": "NEM", "lecture": 0, "tutorial": 30, "lab": 0, "form": "Z", "ects": 1 },
+        { "name": "Język hiszpański", "code": "HIS", "lecture": 0, "tutorial": 30, "lab": 0, "form": "Z", "ects": 1 },
+        { "name": "Język japoński", "code": "JAP", "lecture": 0, "tutorial": 30, "lab": 0, "form": "Z", "ects": 1 }
+      ]
     }
   ]
 }
