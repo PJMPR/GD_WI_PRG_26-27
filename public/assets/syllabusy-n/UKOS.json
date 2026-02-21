@@ -12,15 +12,15 @@
                     "semestr_studiow":  1,
                     "obligatoryjny":  true,
                     "forma_i_liczba_godzin_zajec":  {
-                                                        "wyklady":  16,
+                                                        "wyklady":  30,
                                                         "cwiczenia_lektorat_seminarium":  null,
-                                                        "laboratorium_projekt":  16
+                                                        "laboratorium_projekt":  30
                                                     },
                     "odpowiedzialny_za_przedmiot":  "Mgr inż. Michał Hyla",
                     "ects":  5,
                     "godziny":  {
-                                    "z_udzialem_prowadzacego_h":  32,
-                                    "praca_wlasna_studenta_h":  93,
+                                    "z_udzialem_prowadzacego_h":  60,
+                                    "praca_wlasna_studenta_h":  65,
                                     "calkowita_liczba_godzin_h":  125
                                 },
                     "metody_dydaktyczne":  {
@@ -45,7 +45,7 @@
                                                          "wymagania":  "Nie dotyczy"
                                                      }
                                                  ],
-                    "cel_dydaktyczny":  "Cele dydaktyczne przedmiotu obejmują zapoznanie studentów z podstawami pracy w systemie Linux, w tym z obsługą wiersza poleceń oraz automatyzacją zadań za pomocą skryptów bash. Kluczowe jest również zrozumienie działania systemów kontroli wersji (np. git), co pomaga w efektywnej pracy zespołowej w projektach programistycznych. Cele poboczne obejmują bardziej praktyczne umiejętności, takie jak tworzenie funkcji i skryptów automatyzujących codzienne zadania programistyczne, praca z plikami, pakowanie danych, oraz korzystanie z narzędzi takich jak Midnight Commander czy FTP​",
+                    "cel_dydaktyczny":  "Cele dydaktyczne przedmiotu obejmują zapoznanie studentów z podstawami pracy w systemie Linux, w tym z obsługą wiersza poleceń oraz automatyzacją zadań za pomocą skryptów bash. Kluczowe jest również zrozumienie działania systemów kontroli wersji (np. git), co pomaga w efektywnej pracy zespołowej w projektach programistycznych. Cele poboczne obejmują bardziej praktyczne umiejętności, takie jak tworzenie funkcji i skryptów automatyzujących codzienne zadania programistyczne, praca z plikami, pakowanie danych, oraz korzystanie z narzędzi takich jak Midnight Commander czy FTP",
                     "literatura":  {
                                        "podstawowa":  {
                                                           "pozycje":  [

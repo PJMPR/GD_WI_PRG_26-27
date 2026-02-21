@@ -45,7 +45,7 @@
                                                          "wymagania":  "Nie dotyczy"
                                                      }
                                                  ],
-                    "cel_dydaktyczny":  "Cele dydaktyczne przedmiotu obejmują zapoznanie studentów z podstawami pracy w systemie Linux, w tym z obsługą wiersza poleceń oraz automatyzacją zadań za pomocą skryptów bash. Kluczowe jest również zrozumienie działania systemów kontroli wersji (np. git), co pomaga w efektywnej pracy zespołowej w projektach programistycznych. Cele poboczne obejmują bardziej praktyczne umiejętności, takie jak tworzenie funkcji i skryptów automatyzujących codzienne zadania programistyczne, praca z plikami, pakowanie danych, oraz korzystanie z narzędzi takich jak Midnight Commander czy FTP​",
+                    "cel_dydaktyczny":  "Cele dydaktyczne przedmiotu obejmują zapoznanie studentów z podstawami pracy w systemie Linux, w tym z obsługą wiersza poleceń oraz automatyzacją zadań za pomocą skryptów bash. Kluczowe jest również zrozumienie działania systemów kontroli wersji (np. git), co pomaga w efektywnej pracy zespołowej w projektach programistycznych. Cele poboczne obejmują bardziej praktyczne umiejętności, takie jak tworzenie funkcji i skryptów automatyzujących codzienne zadania programistyczne, praca z plikami, pakowanie danych, oraz korzystanie z narzędzi takich jak Midnight Commander czy FTP",
                     "literatura":  {
                                        "podstawowa":  {
                                                           "pozycje":  [

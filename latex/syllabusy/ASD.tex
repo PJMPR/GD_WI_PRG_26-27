@@ -24,7 +24,7 @@
 \usepackage{mdframed}
 \usepackage[colorlinks=true, linkcolor=red!70!black, urlcolor=red!70!black]{hyperref}
 \usepackage{eso-pic}   % watermark na każdej stronie
-\usepackage{transparent} % przezroczystość watermarku
+\usepackage{tikz}      % przezroczystość watermarku
 
 % ---------- Kolory PJATK -------------------------------------
 \definecolor{pjatkRed}{RGB}{180,0,0}
@@ -55,12 +55,11 @@
 
 % ---------- Watermark na każdej stronie ----------------------
 \AddToShipoutPictureBG{%
-  \AtPageCenter{%
-    \makebox(0,0){%
-      \transparent{0.07}%
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[opacity=0.55] at (current page.center) {%
       \includegraphics[width=14cm]{../PJATK_pl_sygnet_transparent-eps-converted-to}%
-    }%
-  }%
+    };
+  \end{tikzpicture}%
 }
 
 % ---------- Nagłówek tytułowy --------------------------------

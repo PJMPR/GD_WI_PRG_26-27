@@ -9,7 +9,7 @@
                     "nazwa_przedmiotu":  "Modelowanie 3D dla gier",
                     "kod_przedmiotu":  "M3D",
                     "rok_studiow":  3,
-                    "semestr_studiow":  6,
+                    "semestr_studiow":  5,
                     "obligatoryjny":  true,
                     "forma_i_liczba_godzin_zajec":  {
                                                         "wyklady":  30,
@@ -17,7 +17,7 @@
                                                         "laboratorium_projekt":  30
                                                     },
                     "odpowiedzialny_za_przedmiot":  "Dr Piotr Arłukowicz",
-                    "ects":  5,
+                    "ects":  4,
                     "godziny":  {
                                     "z_udzialem_prowadzacego_h":  60,
                                     "praca_wlasna_studenta_h":  40,
@@ -56,12 +56,12 @@
                     "literatura":  {
                                        "podstawowa":  {
                                                           "pozycje":  [
-                                                                          "2. Blender 3D For Beginners: The Complete Guide: The Complete Beginner’s Guide to Getting Started with Navigating, Modeling, Animating, Texturing, Lighting, Compositing and Rendering within Blender, ISBN-13: ‎978-1523238811"
+                                                                          "2. Blender 3D For Beginners: The Complete Guide: The Complete Beginner’s Guide to Getting Started with Navigating, Modeling, Animating, Texturing, Lighting, Compositing and Rendering within Blender, ISBN-13: 978-1523238811"
                                                                       ]
                                                       },
                                        "uzupelniajaca":  {
                                                              "pozycje":  [
-                                                                             "1. Mind-Melding Unity and Blender for 3D Game Development: Unleash the power of Unity and Blender to create amazing games, ISBN-13: ‎978-1801071550"
+                                                                             "1. Mind-Melding Unity and Blender for 3D Game Development: Unleash the power of Unity and Blender to create amazing games, ISBN-13: 978-1801071550"
                                                                          ]
                                                          },
                                        "dokumentacja_internetowa":  {
