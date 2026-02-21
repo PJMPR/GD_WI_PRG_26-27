@@ -23,6 +23,8 @@
 \usepackage{titlesec}
 \usepackage{mdframed}
 \usepackage[colorlinks=true, linkcolor=red!70!black, urlcolor=red!70!black]{hyperref}
+\usepackage{eso-pic}   % watermark na każdej stronie
+\usepackage{transparent} % przezroczystość watermarku
 
 % ---------- Kolory PJATK -------------------------------------
 \definecolor{pjatkRed}{RGB}{180,0,0}
@@ -51,12 +53,19 @@
 % ============================================================
 \begin{document}
 
+% ---------- Watermark na każdej stronie ----------------------
+\AddToShipoutPictureBG{%
+  \AtPageCenter{%
+    \makebox(0,0){%
+      \transparent{0.07}%
+      \includegraphics[width=14cm]{../PJATK_pl_sygnet_transparent-eps-converted-to}%
+    }%
+  }%
+}
+
 % ---------- Nagłówek tytułowy --------------------------------
 \begin{center}
-  % Logo – skopiuj pjatk-logo.png do folderu latex/ lub usuń tę linię
-  % \includegraphics[width=4cm]{../szablony/pjatk-logo}\\[0.5cm]
-  {\Large\bfseries Polsko-Japońska Akademia Technik Komputerowych}\\[0.2cm]
-  {\large Filia w Gdańsku}\\[0.8cm]
+  \includegraphics[height=2cm]{../PJATK_pl_poziom_1}\\[0.8cm]
   {\LARGE\bfseries\color{pjatkRed} SYLABUS PRZEDMIOTU}\\[0.8cm]
 \end{center}
 
