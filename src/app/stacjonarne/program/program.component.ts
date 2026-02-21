@@ -1,6 +1,7 @@
 import { Component, OnInit, computed, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { AccordionModule } from 'primeng/accordion';
 import { TabsModule } from 'primeng/tabs';
 import { TreeTableModule } from 'primeng/treetable';
@@ -42,6 +43,7 @@ import { SylabusFormComponent } from '../../shared/sylabus-form/sylabus-form.com
 export class ProgramComponent implements OnInit {
   semesters = signal<SemesterViewModel[]>([]);
   loading = signal(true);
+  programPdf = signal<string | null>(null);
 
   totals = computed(() => {
     const data = this.semesters();
@@ -65,9 +67,18 @@ export class ProgramComponent implements OnInit {
   constructor(
     private programService: ProgramService,
     private http: HttpClient,
+    private router: Router,
   ) {}
 
+  openPdf(pdfPath: string, title: string = 'Program studiów'): void {
+    const url = this.baseHrefService.assetUrl(pdfPath.replace(/^assets\//, ''));
+    this.router.navigate(['/pdf-viewer'], { queryParams: { url, title } });
+  }
+
   ngOnInit(): void {
+    this.http.get<any>(this.baseHrefService.assetUrl('program.json')).subscribe({
+      next: (raw) => { if (raw?.pdf) this.programPdf.set(raw.pdf); },
+    });
     this.programService.loadAll().subscribe({
       next: (data) => {
         this.semesters.set(data);

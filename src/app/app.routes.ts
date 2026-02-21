@@ -11,5 +11,10 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./niestacjonarne/program/niestacjonarne-program.component').then((m) => m.NiestacjonarneProgramComponent),
   },
+  {
+    path: 'pdf-viewer',
+    loadComponent: () =>
+      import('./pdf-viewer/pdf-viewer.component').then((m) => m.PdfViewerComponent),
+  },
   { path: '', redirectTo: 'stacjonarne/program', pathMatch: 'full' },
 ];

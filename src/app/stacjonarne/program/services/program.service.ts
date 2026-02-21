@@ -70,6 +70,7 @@ export class ProgramService {
             form: item.form,
             ects: item.ects,
             syllabusFile: (item as any).syllabusFile,
+            pdf: (item as any).pdf,
           });
         } else {
           specBySemesterGroup.get(key)!.push({
@@ -85,6 +86,7 @@ export class ProgramService {
                 form: item.form,
                 ects: item.ects,
                 syllabusFile: (item as any).syllabusFile,
+                pdf: (item as any).pdf,
               },
             ],
           });
@@ -111,6 +113,7 @@ export class ProgramService {
               form: subject.form,
               ects: subject.ects,
               syllabusFile: (subject as any).syllabusFile,
+              pdf: (subject as any).pdf,
             },
             leaf: true,
           });
@@ -204,6 +207,7 @@ export class ProgramService {
                 form: item.form,
                 ects: item.ects,
                 syllabusFile: (item as any).syllabusFile,
+                pdf: (item as any).pdf,
               },
               leaf: true,
             })),
@@ -222,6 +226,7 @@ export class ProgramService {
               form: subject.form,
               ects: subject.ects,
               electiveGroup: groupId,
+              pdf: (subject as any).pdf,
             },
             leaf: true,
           });

@@ -63,6 +63,7 @@ export class NiestacjonarneProgramService {
           lecture: item.lecture, tutorial: item.tutorial ?? 0, lab: item.lab,
           form: item.form, ects: item.ects,
           syllabusFile: (item as any).syllabusFile,
+          pdf: (item as any).pdf,
         };
         if (existing) {
           existing.items.push(row);
@@ -84,6 +85,7 @@ export class NiestacjonarneProgramService {
               lecture: subject.lecture, tutorial: subject.tutorial, lab: subject.lab,
               form: subject.form, ects: subject.ects,
               syllabusFile: (subject as any).syllabusFile,
+              pdf: (subject as any).pdf,
             },
             leaf: true,
           });
@@ -139,6 +141,7 @@ export class NiestacjonarneProgramService {
                 lecture: item.lecture, tutorial: item.tutorial, lab: item.lab,
                 form: item.form, ects: item.ects,
                 syllabusFile: (item as any).syllabusFile,
+                pdf: (item as any).pdf,
               },
               leaf: true,
             })),
@@ -150,6 +153,7 @@ export class NiestacjonarneProgramService {
               lecture: subject.lecture, tutorial: subject.tutorial, lab: subject.lab,
               form: subject.form, ects: subject.ects, electiveGroup: groupId,
               syllabusFile: (subject as any).syllabusFile,
+              pdf: (subject as any).pdf,
             },
             leaf: true,
           });

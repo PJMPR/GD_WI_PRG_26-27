@@ -8,7 +8,13 @@
 
     <!-- Podsumowanie wszystkich semestrów -->
     <div class="total-summary">
-      <h1 class="page-title">Program studiów – studia niestacjonarne</h1>
+      <div class="page-title-row">
+        <h1 class="page-title">Program studiów – studia niestacjonarne</h1>
+        @if (programPdf()) {
+          <p-button icon="pi pi-file-pdf" label="Pobierz PDF" severity="danger" size="small"
+            (onClick)="openPdf(programPdf()!, 'Program studiów – studia niestacjonarne')" />
+        }
+      </div>
       <span class="total-summary-title">Podsumowanie programu:</span>
       <div class="total-summary-items">
         <div class="total-summary-item">
@@ -104,13 +110,20 @@
                   <td class="text-center"><strong>{{ rowData.ects }}</strong></td>
                   <td>
                     @if (!rowData.isGroup) {
-                      <p-button
-                        label="Szczegóły"
-                        icon="pi pi-info-circle"
-                        size="small"
-                        severity="primary"
-                        (onClick)="openDetails(rowData, sem.semester)"
-                      />
+                      <div class="action-cell">
+                        <p-button
+                          label="Szczegóły"
+                          icon="pi pi-info-circle"
+                          size="small"
+                          severity="primary"
+                          (onClick)="openDetails(rowData, sem.semester)"
+                        />
+                        @if (rowData.pdf) {
+                          <p-button icon="pi pi-file-pdf" [rounded]="true" [text]="true" severity="danger" size="small"
+                            title="Pobierz sylabus (PDF)"
+                            (onClick)="openPdf(rowData.pdf, rowData.name)" />
+                        }
+                      </div>
                     }
                   </td>
                 </tr>

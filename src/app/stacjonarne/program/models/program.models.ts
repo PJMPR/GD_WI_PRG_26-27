@@ -38,6 +38,7 @@ export interface ElectiveItem {
   ects: number;
   semester?: number;
   syllabusFile?: string;
+  pdf?: string;
 }
 
 export interface ElectiveGroup {
@@ -82,6 +83,7 @@ export interface SubjectRow {
   isGroup?: boolean;
   electiveGroup?: string;
   syllabusFile?: string;
+  pdf?: string;
 }
 
 // ---- Sylabus JSON structures ----
