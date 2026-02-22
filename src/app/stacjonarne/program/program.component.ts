@@ -13,9 +13,10 @@ import { CardModule } from 'primeng/card';
 import { TableModule } from 'primeng/table';
 import { DividerModule } from 'primeng/divider';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { TimelineModule } from 'primeng/timeline';
 
 import { ProgramService, SemesterViewModel } from './services/program.service';
-import { SubjectRow, SylabusData, SylabusFile } from './models/program.models';
+import { SubjectRow, SylabusData, SylabusFile, ProgramChange, ProgramChangesData } from './models/program.models';
 import { BaseHrefService } from '../../shared/base-href.service';
 import { SylabusFormComponent } from '../../shared/sylabus-form/sylabus-form.component';
 
@@ -35,6 +36,7 @@ import { SylabusFormComponent } from '../../shared/sylabus-form/sylabus-form.com
     TableModule,
     DividerModule,
     ProgressSpinnerModule,
+    TimelineModule,
     SylabusFormComponent,
   ],
   templateUrl: './program.component.html',
@@ -44,6 +46,7 @@ export class ProgramComponent implements OnInit {
   semesters = signal<SemesterViewModel[]>([]);
   loading = signal(true);
   programPdf = signal<string | null>(null);
+  changesMap = signal<Map<number, ProgramChange[]>>(new Map());
 
   totals = computed(() => {
     const data = this.semesters();
@@ -78,6 +81,13 @@ export class ProgramComponent implements OnInit {
   ngOnInit(): void {
     this.http.get<any>(this.baseHrefService.assetUrl('program.json')).subscribe({
       next: (raw) => { if (raw?.pdf) this.programPdf.set(raw.pdf); },
+    });
+    this.http.get<ProgramChangesData>(this.baseHrefService.assetUrl('changes.json')).subscribe({
+      next: (data) => {
+        const map = new Map<number, ProgramChange[]>();
+        data.programChanges.forEach(sc => map.set(sc.semester, sc.changes));
+        this.changesMap.set(map);
+      },
     });
     this.programService.loadAll().subscribe({
       next: (data) => {
@@ -141,5 +151,39 @@ export class ProgramComponent implements OnInit {
     return Object.entries(m)
       .filter(([, v]) => Array.isArray(v) && (v as string[]).length > 0)
       .map(([forma, v]) => ({ forma, metody: v as string[] }));
+  }
+
+  getChangesForSemester(semester: number): ProgramChange[] {
+    return this.changesMap().get(semester) ?? [];
+  }
+
+  getChangeSeverity(type: ProgramChange['type']): 'success' | 'info' | 'warn' | 'danger' {
+    const map: Record<string, 'success' | 'info' | 'warn' | 'danger'> = {
+      nowy: 'success',
+      zmiana: 'info',
+      przeniesienie: 'warn',
+      usunięcie: 'danger',
+    };
+    return map[type] ?? 'info';
+  }
+
+  getChangeIcon(type: ProgramChange['type']): string {
+    const map: Record<string, string> = {
+      nowy: 'pi pi-plus-circle',
+      zmiana: 'pi pi-pencil',
+      przeniesienie: 'pi pi-arrow-right-arrow-left',
+      usunięcie: 'pi pi-trash',
+    };
+    return map[type] ?? 'pi pi-info-circle';
+  }
+
+  getChangeLabel(type: ProgramChange['type']): string {
+    const map: Record<string, string> = {
+      nowy: 'Nowy przedmiot',
+      zmiana: 'Zmiana',
+      przeniesienie: 'Przeniesienie',
+      usunięcie: 'Usunięcie',
+    };
+    return map[type] ?? type;
   }
 }

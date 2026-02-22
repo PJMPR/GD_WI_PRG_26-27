@@ -334,4 +334,102 @@
   font-size: 0.82rem;
 }
 
+/* ── Sekcja zmian w programie ──────────────────── */
+.changes-section {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.25rem 0.75rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #6366f1;
+}
+
+.changes-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.changes-header-icon {
+  font-size: 1.1rem;
+  color: #6366f1;
+}
+
+.changes-header-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  flex: 1;
+}
+
+/* Marker na osi czasu */
+.change-marker {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.change-marker[data-type="nowy"]         { background: #16a34a; }
+.change-marker[data-type="zmiana"]       { background: #2563eb; }
+.change-marker[data-type="przeniesienie"]{ background: #d97706; }
+.change-marker[data-type="usunięcie"]   { background: #dc2626; }
+
+/* Karta zmiany */
+.change-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.change-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.change-subject {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1e293b;
+  flex: 1;
+}
+
+.change-reason {
+  font-size: 0.82rem;
+  color: #4b5563;
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* ── Timeline – wyrównanie do lewej ─────────────── */
+:host ::ng-deep .changes-timeline .p-timeline-event-opposite {
+  display: none !important;
+  flex: 0 !important;
+  padding: 0 !important;
+}
+
+:host ::ng-deep .changes-timeline .p-timeline-event {
+  flex-direction: row !important;
+}
+
+:host ::ng-deep .changes-timeline .p-timeline-event-separator {
+  flex: 0 0 2.5rem !important;
+}
+
+:host ::ng-deep .changes-timeline .p-timeline-event-content {
+  flex: 1 !important;
+  padding-left: 0.5rem !important;
+}
 

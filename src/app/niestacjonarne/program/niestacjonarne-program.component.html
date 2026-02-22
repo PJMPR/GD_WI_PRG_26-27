@@ -57,14 +57,6 @@
         @for (sem of semesters(); track sem.semester) {
           <p-tabpanel [value]="sem.semester.toString()">
 
-            <!-- Opis semestru -->
-            <div class="semester-description">
-              @if (sem.description) {
-                <p>{{ sem.description }}</p>
-              } @else {
-                <p class="description-placeholder"><em>Opis programu semestru – do uzupełnienia.</em></p>
-              }
-            </div>
 
             <!-- TreeTable z przedmiotami -->
             <p-treeTable

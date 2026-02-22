@@ -57,14 +57,6 @@
         @for (sem of semesters(); track sem.semester) {
           <p-tabpanel [value]="sem.semester.toString()">
 
-            <!-- Opis semestru -->
-            <div class="semester-description">
-              @if (sem.description) {
-                <p>{{ sem.description }}</p>
-              } @else {
-                <p class="description-placeholder"><em>Opis programu semestru – do uzupełnienia.</em></p>
-              }
-            </div>
 
             <!-- TreeTable z przedmiotami -->
             <p-treeTable
@@ -155,6 +147,41 @@
                 <span class="summary-value">{{ sem.totalLecture + sem.totalTutorial + sem.totalLab }} h</span>
               </div>
             </div>
+
+            <!-- Zmiany w programie -->
+            @if (getChangesForSemester(sem.semester).length > 0) {
+              <div class="changes-section">
+                <div class="changes-header">
+                  <i class="pi pi-history changes-header-icon"></i>
+                  <span class="changes-header-title">Zmiany w programie semestru</span>
+                  <p-tag [value]="getChangesForSemester(sem.semester).length + ' zmian'" severity="secondary" styleClass="changes-count-tag" />
+                </div>
+                <p-timeline
+                  [value]="getChangesForSemester(sem.semester)"
+                  styleClass="changes-timeline"
+                  align="left"
+                >
+                  <ng-template pTemplate="marker" let-change>
+                    <span class="change-marker" [attr.data-type]="change.type">
+                      <i [class]="getChangeIcon(change.type)"></i>
+                    </span>
+                  </ng-template>
+                  <ng-template pTemplate="content" let-change>
+                    <div class="change-card">
+                      <div class="change-card-header">
+                        <span class="change-subject">{{ change.subject }}</span>
+                        <p-tag
+                          [value]="getChangeLabel(change.type)"
+                          [severity]="getChangeSeverity(change.type)"
+                          styleClass="change-type-tag"
+                        />
+                      </div>
+                      <p class="change-reason">{{ change.reason }}</p>
+                    </div>
+                  </ng-template>
+                </p-timeline>
+              </div>
+            }
 
           </p-tabpanel>
         }

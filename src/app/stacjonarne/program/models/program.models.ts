@@ -1,3 +1,18 @@
+export interface ProgramChange {
+  subject: string;
+  type: 'przeniesienie' | 'zmiana' | 'nowy' | 'usunięcie';
+  reason: string;
+}
+
+export interface SemesterChanges {
+  semester: number;
+  changes: ProgramChange[];
+}
+
+export interface ProgramChangesData {
+  programChanges: SemesterChanges[];
+}
+
 export interface Subject {
   name: string;
   type: 'M' | 'O';
